@@ -1,0 +1,81 @@
+{
+  "@@locale": "en",
+  "settings": "Settings",
+  "sectionPreferences": "Preferences",
+  "sectionPrivacy": "Privacy",
+  "sectionAccount": "Account",
+  "appearance": "Appearance",
+  "appearanceSystem": "System default",
+  "appearanceLight": "Light",
+  "appearanceDark": "Dark",
+  "language": "Language",
+  "languageSystem": "System default",
+  "clearCache": "Clear cache",
+  "cacheCalculating": "Calculating…",
+  "clearCacheBody": "Downloaded episodes and saved images will be removed. Your account and library stay untouched.",
+  "clearCacheDone": "Cache cleared",
+  "cancel": "Cancel",
+  "clear": "Clear",
+  "marketing": "Marketing communications",
+  "marketingSubtitle": "Offers, new series and updates. Change it any time.",
+  "privacyManagement": "Privacy management",
+  "privacySubtitle": "Cookies and data choices",
+  "privacyIntro": "Choose how DramaByte may use cookies and similar technologies. You can change this at any time.",
+  "privacyEssential": "Essential",
+  "privacyEssentialBody": "Sign-in, security and playback. Always on.",
+  "privacyAnalytics": "Analytics",
+  "privacyAnalyticsBody": "Helps us find bugs and improve the app.",
+  "privacyPersonalization": "Personalisation",
+  "privacyPersonalizationBody": "Recommend series based on what you watch.",
+  "membership": "Manage membership",
+  "membershipActive": "VIP · {days} days left",
+  "@membershipActive": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "membershipFree": "Free plan",
+  "membershipFreeBody": "You are not a VIP member. Top up coins to unlock premium episodes.",
+  "membershipManageBody": "Subscriptions are billed and cancelled through your app store account.",
+  "manageSubscription": "Manage subscription",
+  "getCoins": "Top up coins",
+  "about": "About",
+  "aboutVersion": "Version {version} ({build})",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      },
+      "build": {
+        "type": "String"
+      }
+    }
+  },
+  "termsOfService": "Terms of service",
+  "privacyPolicy": "Privacy policy",
+  "licenses": "Open-source licences",
+  "deleteAccount": "Delete account",
+  "deleteAccountSubtitle": "Permanently remove your data",
+  "deleteWarning": "This cannot be undone. Your profile, coins, library, history and ratings will be removed and you will be signed out.",
+  "deleteTypeToConfirm": "Type {word} to confirm",
+  "@deleteTypeToConfirm": {
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteConfirm": "Verify with Google and delete",
+  "deleteFailed": "Could not delete your account. Please try again.",
+  "savedOffline": "Saved on this device. We will sync it when you are back online.",
+  "clearCacheSize": "{size} used",
+  "@clearCacheSize": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+:root{color-scheme:dark;--surface:#111;--hover:#ffffff0b;--soft:#ffffff15;--subtle:#ffffff06;--accent:#009b70;--accent-text:#76ceb0;--rating:#e8bc61;--error:#ffad9d;--inverse-bg:#fff;--inverse-text:#111;--hero-fade:#000;--hero-shade:#000000bb;--shadow:#0006}
+:root[data-theme=light]{color-scheme:light;--bg:#fff;--surface:#fff;--panel:#f5f5f6;--panel-2:#eaeaec;--text:#171719;--muted:#62626a;--line:#dedee2;--blush:#343038;--hover:#00000008;--soft:#0000000c;--subtle:#00000004;--accent:#007b59;--accent-text:#007b59;--rating:#a66f00;--error:#b72e25;--inverse-bg:#171719;--inverse-text:#fff;--hero-fade:#fff;--hero-shade:#ffffffbb;--shadow:#00000018}
+:root[data-theme=light] .logo>svg{color:var(--accent)}
+:root[data-theme=light] .logo span span{color:var(--accent-text)}

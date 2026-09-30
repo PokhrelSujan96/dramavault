@@ -1,0 +1,1 @@
+.form{display:grid;gap:12px}.form label{font-size:.85rem;font-weight:700}.form label span{color:var(--muted);font-weight:500}.google{min-height:44px;display:grid;place-items:center;margin-top:6px}.error{color:#c92e2a;font-size:.82rem;margin:0}.legal{text-align:center;color:var(--muted);font-size:.72rem;line-height:1.5;margin:12px 0 0}

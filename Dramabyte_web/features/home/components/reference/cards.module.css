@@ -1,0 +1,58 @@
+.section{margin:0 var(--page-gutter);padding:8px 0 10px}
+.heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:15px}
+.heading h2{font-size:18px;font-weight:750;margin:0;letter-spacing:-.3px;display:flex;align-items:center;gap:8px}
+.controls{display:flex;gap:10px}
+.controls button{display:grid;place-items:center;border:0;background:var(--panel-2);color:var(--muted);width:25px;height:25px;border-radius:50%}
+.controls button:hover{background:var(--panel-2)}
+.rail{display:flex;gap:15px;overflow:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:5px}
+.rail::-webkit-scrollbar{display:none}
+.card{flex:0 0 calc((100% - 60px)/4.55);min-width:0;position:relative;scroll-snap-align:start;border-radius:9px;overflow:hidden}
+.image{position:relative;background:var(--panel-2);overflow:hidden;border-radius:9px}
+.image img{object-fit:cover;object-position:center 30%;transition:transform .2s}
+.card:hover .image img{transform:scale(1.03)}
+.portrait .image{aspect-ratio:2/3}
+.portrait .caption{position:absolute;inset:auto 0 0;padding:40px 13px 13px;background:linear-gradient(transparent,#000 65%)}
+.landscape .image{aspect-ratio:1.55}
+.landscape .image img{object-position:center 25%}
+.caption{padding:10px 0 0}
+.caption h3{font-size:12px;font-weight:650;margin:0 0 8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.meta{display:flex;align-items:center;gap:5px;font-size:10px;line-height:1.4;color:var(--muted);white-space:nowrap}
+.secondary{color:var(--muted);font-size:9px;overflow:hidden;text-overflow:ellipsis}
+.selected{outline:2px solid #00a373;outline-offset:0}
+.popular{display:flex;gap:25px;overflow:auto;scrollbar-width:none}
+.ranked{display:flex;align-items:center;gap:13px;flex:0 0 calc((100% - 75px)/3.7);min-width:0}
+.rank{font-size:40px;font-weight:750;letter-spacing:-2px}
+.ranked>img{width:76px;height:108px;object-fit:cover;border-radius:7px}
+.ranked>div{min-width:0}
+.ranked h3,.compactItem h3{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:9px 0}
+.age{color:#a0a0a6;font-size:9px}
+.ranked p,.compactItem p{color:var(--muted);font-size:9px;margin:0 0 9px}
+.ranked .secondary,.compactItem .secondary{display:none}
+.awards{margin:0 var(--page-gutter);padding-top:30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:42px}
+.awardImage{height:245px;position:relative;overflow:hidden;border-radius:5px;isolation:isolate}
+.awardImage img{object-fit:cover;object-position:center 27%}
+.awardImage:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0009,transparent)}
+.awardImage>span{position:absolute;bottom:22px;left:22px;z-index:1;font-size:14px}
+.awardImage strong{display:block;font-size:34px;letter-spacing:1px;margin-top:8px;font-style:italic}
+.awardBadge{display:inline-block;border-radius:20px;background:var(--panel-2);font-size:11px;padding:6px 12px;margin:19px 0 15px}
+.award>h3{font-size:36px;letter-spacing:-.8px;margin:0 0 9px}
+.awardDescription{font-size:10px;line-height:1.5;color:var(--muted);margin:10px 0;max-width:430px}
+.compactItem{display:flex;gap:13px;margin-bottom:17px;align-items:center}
+.compactItem>img{width:78px;height:105px;object-fit:cover;border-radius:7px}
+.compactItem>div{min-width:0}
+.liveDot{height:6px;width:6px;border-radius:50%;background:#ff443f}
+@media(min-width:1400px){.section{padding:10px 0 12px}.heading h2{font-size:22px}.rail{gap:20px}.caption h3{font-size:14px}.meta{font-size:11px}.secondary{font-size:10px}.awardImage{height:300px}.ranked h3,.compactItem h3{font-size:13px}}
+@media(max-width:1000px){.ranked{flex-basis:30%;gap:9px}.ranked>img{width:58px;height:84px}.rank{font-size:32px}.awards{gap:25px}.compactItem{gap:10px}.compactItem>img{width:58px;height:85px}.awardImage{height:210px}.caption h3{font-size:11px}.meta{font-size:9px}.secondary{font-size:8px}}
+@media(max-width:700px){.card{flex-basis:calc((100% - 30px)/2.6)}.heading{margin-bottom:8px}.heading h2{font-size:17px}.rail{gap:12px}.section{padding:6px 0 8px}.ranked{flex-basis:235px}.ranked>img{width:65px;height:93px}.ranked h3{font-size:12px}.awards{grid-template-columns:1fr 1fr;gap:35px 20px}.award{grid-column:1/-1}.awardImage{height:260px}.compactItem{align-items:flex-start;gap:9px}.compactItem>img{width:52px;height:78px}.compactItem h3{font-size:10px}.compactItem p{font-size:8px}.compactItem .meta{font-size:8px}.compactItem .age{font-size:8px}.portrait .caption{padding-left:9px;padding-right:9px}.awardDescription{font-size:11px}}
+
+.artworkFallback{display:grid;place-items:center;width:100%;height:100%;min-height:78px;background:linear-gradient(140deg,#224239,#131820);color:#91bba9}
+.image>.artworkFallback,.awardImage>.artworkFallback{position:absolute;inset:0}
+.rankedArt,.compactArt{position:relative;flex-shrink:0;width:76px;height:108px;border-radius:7px;overflow:hidden}
+.rankedArt img,.compactArt img{object-fit:cover}
+.compactArt{width:78px;height:105px}
+@media(max-width:1000px){.rankedArt,.compactArt{width:58px;height:85px}}
+@media(max-width:700px){.rankedArt{width:65px;height:93px}.compactArt{width:52px;height:78px}}
+.portrait .caption{color:#fff}
+.portrait .caption .meta,.portrait .caption .secondary{color:#ddd}
+.portrait .caption{background:linear-gradient(transparent,#000 65%)}
+.controls button{color:var(--text)}

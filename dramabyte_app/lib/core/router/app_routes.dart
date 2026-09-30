@@ -1,0 +1,26 @@
+abstract final class AppRoutes {
+  static const root = '/';
+  static const rootName = 'root';
+  static const dashboard = '/dashboard';
+  static const dashboardName = 'dashboard';
+  static const series = '/series/:seriesId';
+  static const seriesName = 'series';
+  static const watch = '/series/:seriesId/watch';
+  static const watchName = 'watch';
+  static const history = '/history';
+  static const historyName = 'history';
+  static const topup = '/topup';
+  static const topupName = 'topup';
+  static const referral = '/referral';
+  static const referralName = 'referral';
+  static const settings = '/settings';
+  static const settingsName = 'settings';
+  static const privacy = '/settings/privacy';
+  static const privacyName = 'privacy';
+  static const membership = '/settings/membership';
+  static const membershipName = 'membership';
+  static const about = '/settings/about';
+  static const aboutName = 'about';
+  static const deleteAccount = '/settings/delete-account';
+  static const deleteAccountName = 'delete-account';
+}

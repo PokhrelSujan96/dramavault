@@ -1,0 +1,44 @@
+.panel{padding:0;font-size:12px}
+.panel>header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;padding-right:36px}
+.panel>header h2{margin:0;font-size:14px}
+.panel select,.report input{background:var(--panel-2);color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:7px;font:inherit}
+.panel button{cursor:pointer;background:transparent;color:var(--muted);border:0;font:inherit}
+.panel button:disabled{opacity:.45;cursor:default}
+.panel button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.composer textarea{display:block;width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;color:var(--text);resize:vertical;min-height:64px;max-height:140px;padding:10px;font:inherit;line-height:1.5;margin-top:6px}
+.label{display:block;color:var(--muted);font-size:11px}
+.composer>div{display:flex;align-items:center;justify-content:space-between;margin:8px 0 18px;font-size:10px;color:var(--muted)}
+.composer button{background:var(--accent);color:white;padding:7px 14px;border-radius:6px}
+.comment{padding:14px 0;border-top:1px solid var(--line)}
+.comment>header{display:flex;justify-content:space-between;gap:10px;font-size:11px}
+.comment>header span{color:var(--muted);font-size:10px}
+.comment>p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6;color:var(--muted);font-size:12px;margin:8px 0}
+.actions{display:flex;align-items:center;gap:16px;font-size:10px}
+.actions button{display:inline-flex;gap:4px;align-items:center;padding:4px 0}
+.actions [aria-pressed=true]{color:#ef3835}
+.error{color:var(--error)!important;font-size:11px;line-height:1.5}
+.error button{margin-left:10px;text-decoration:underline}
+.empty{color:var(--muted);font-size:12px}
+.replies{margin-top:14px;border-left:1px solid var(--line);padding-left:12px}
+.report{display:flex;gap:8px;margin-top:12px}
+.report input{width:100%;min-width:0;font-size:11px}
+.more{width:100%;padding:10px;margin-top:10px}
+
+.panel{display:flex;flex-direction:column;height:100%;min-height:0}
+.panel>header{flex-shrink:0;padding-right:30px;margin-bottom:20px;gap:10px}
+.panel>header h2{font-size:18px;white-space:nowrap}
+.panel>header h2 span{color:var(--muted);font-weight:400;margin-left:5px;font-size:14px}
+.scrollArea{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-right:4px}
+.comment{position:relative;padding:8px 0 24px 44px;border-top:0}
+.commentAvatar{position:absolute;top:5px;left:0;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--panel-2);color:var(--muted);font-size:13px;font-weight:650}
+.comment>header{font-size:13px}.comment>p{font-size:13px;color:var(--text);margin:8px 0 10px}
+.actions{gap:12px;font-size:11px;flex-wrap:wrap}.actions button:first-child{margin-left:auto;order:3}
+.compactComposer{flex-shrink:0;padding-top:16px;border-top:1px solid var(--line);margin-top:8px}
+.compactComposer .label{font-size:0}
+.compactComposer textarea{font-size:13px;min-height:42px;max-height:90px;border-radius:20px;background:var(--panel-2);resize:none;margin:0;padding:11px 14px}
+.compactComposer>div{margin:8px 0 0}
+.compactComposer button{border-radius:20px}
+
+.signIn{flex-shrink:0;border-top:1px solid var(--line);padding:18px 0 0;margin-top:8px}.signIn a{display:block;text-align:center;background:var(--panel-2);color:var(--text);padding:12px 16px;border-radius:22px;font-size:13px}
+
+.panel>header{padding-right:0}

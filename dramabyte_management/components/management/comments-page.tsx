@@ -1,0 +1,10 @@
+import { useState } from "react";
+import { useManagement } from "@/hooks/use-management";
+
+type Comment = { id: string; body: string; is_hidden: boolean; created_at: string; profiles: { display_name: string }; episodes: { title: string; episode_number: number; series: { title: string } } };
+export function CommentsPage({ query }: { query: string }) {
+  const [page, setPage] = useState(1);
+  const data = useManagement<Comment>(`/admin/comments?page=${page}`);
+  const comments = data.items.filter((item) => `${item.body} ${item.profiles?.display_name} ${item.episodes?.title}`.toLowerCase().includes(query.toLowerCase()));
+  return <section className="management-page"><header><div><h1>Audience comments</h1><p>Review feedback and moderate your drama community.</p></div><span>{data.total} comments</span></header>{data.error && <p role="alert" className="dashboard-error">{data.error}</p>}<div className="management-card"><table><thead><tr><th>Viewer</th><th>Series / episode</th><th>Comment</th><th>Status</th><th /></tr></thead><tbody>{comments.map((comment) => <tr key={comment.id}><td>{comment.profiles?.display_name || "Viewer"}<small>{new Date(comment.created_at).toLocaleDateString()}</small></td><td>{comment.episodes?.series?.title}<small>Episode {comment.episodes?.episode_number} · {comment.episodes?.title}</small></td><td>{comment.body}</td><td>{comment.is_hidden ? "Hidden" : "Visible"}</td><td><button disabled={data.busy} onClick={() => void data.mutate(`/admin/comments/${comment.id}`, "PATCH", { is_hidden: !comment.is_hidden })}>{comment.is_hidden ? "Restore" : "Hide"}</button></td></tr>)}</tbody></table>{!comments.length && <p className="empty-state">{data.busy ? "Loading feedback…" : "No comments on this page yet."}</p>}</div><footer><button disabled={page === 1 || data.busy} onClick={() => setPage(page - 1)}>Previous</button><span>Page {page}</span><button disabled={page * 25 >= data.total || data.busy} onClick={() => setPage(page + 1)}>Next</button></footer></section>;
+}

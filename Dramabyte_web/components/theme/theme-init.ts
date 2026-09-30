@@ -1,0 +1,1 @@
+export const themeInit = `(function(){var t;try{t=localStorage.getItem("dramabyte-theme")}catch(e){}document.documentElement.dataset.theme=t==="light"||t==="dark"?t:matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"})()`;
